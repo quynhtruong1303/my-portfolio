@@ -1,1 +1,272 @@
-/* Add you CSS here */
+/* ===== COLOR PALETTE ===== */
+/* #3D8D7A (dark teal), #B3D8A8 (light green), #FBFFE4 (cream), #A3D1C6 (mint) */
+
+/* ===== GENERAL STYLES ===== */
+* {
+  /* Reset default margins and padding */
+  margin: 0;
+  padding: 0;
+  /* Include padding/borders in width calculations */
+  box-sizing: border-box;
+}
+
+body {
+  /* Use retro pixel font for that gaming vibe */
+  font-family: 'Press Start 2P', cursive;
+  /* Fallback font if pixel font doesn't load */
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  /* Light cream background for retro feel */
+  background-color: #FBFFE4;
+  /* Dark teal text for good contrast */
+  color: #3D8D7A;
+  /* Add some padding around the whole page */
+  padding: 20px;
+  /* Smooth transitions for interactive elements */
+  line-height: 1.6;
+}
+
+/* ===== HEADER STYLES ===== */
+header {
+  /* Dark teal background for the header */
+  background-color: #3D8D7A;
+  /* Thick pixelated border for retro look */
+  border: 8px solid #3D8D7A;
+  /* Add some padding inside */
+  padding: 40px 20px;
+  /* Center the content */
+  text-align: center;
+  /* Add margin at bottom for spacing */
+  margin-bottom: 40px;
+}
+
+.header-content {
+  /* Create a nice container for the header text */
+}
+
+.main-title {
+  /* Large title text */
+  font-size: 32px;
+  /* Light cream color for contrast */
+  color: #FBFFE4;
+  /* Add bottom margin for spacing from subtitle */
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  /* Smaller subtitle text */
+  font-size: 12px;
+  /* Mint color for accent */
+  color: #A3D1C6;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  /* Maximum width to keep content readable */
+  max-width: 1000px;
+  /* Center the container */
+  margin: 0 auto;
+}
+
+/* ===== CARD STYLES (Section styling) ===== */
+.card {
+  /* Light mint background for each section */
+  background-color: #A3D1C6;
+  /* Thick border for pixelated/retro feel */
+  border: 6px solid #3D8D7A;
+  /* Padding inside the card */
+  padding: 30px;
+  /* Add space between cards */
+  margin-bottom: 30px;
+}
+
+.section-title {
+  /* Title size for each section */
+  font-size: 20px;
+  /* Dark teal color */
+  color: #3D8D7A;
+  /* Add space below the title */
+  margin-bottom: 20px;
+  /* Add bottom border line */
+  border-bottom: 4px solid #3D8D7A;
+  /* Padding below the border */
+  padding-bottom: 10px;
+}
+
+.card p {
+  /* Add space between paragraphs */
+  margin-bottom: 15px;
+  /* Readable font size */
+  font-size: 10px;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-grid {
+  /* Display skills in a grid layout */
+  display: flex;
+  /* Wrap items to next line if needed */
+  flex-wrap: wrap;
+  /* Space between skill items */
+  gap: 15px;
+}
+
+.skill-item {
+  /* Each skill takes up equal space */
+  flex: 1;
+  /* Minimum width so they don't get too small */
+  min-width: 150px;
+}
+
+.skill-badge {
+  /* Light cream background for badges */
+  background-color: #FBFFE4;
+  /* Dark teal border for retro look */
+  border: 3px solid #3D8D7A;
+  /* Padding inside the badge */
+  padding: 12px 15px;
+  /* Display as a block so it takes full width */
+  display: block;
+  /* Center text inside */
+  text-align: center;
+  /* Smaller font size for badges */
+  font-size: 9px;
+  /* Smooth color transition on hover */
+  transition: all 0.2s ease;
+}
+
+/* Hover effect for skill badges */
+.skill-badge:hover {
+  /* Change to dark teal background on hover */
+  background-color: #3D8D7A;
+  /* Change text to cream color */
+  color: #FBFFE4;
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects-list {
+  /* Stack projects vertically */
+}
+
+.project-item {
+  /* Light cream background */
+  background-color: #FBFFE4;
+  /* Border for each project */
+  border: 3px solid #3D8D7A;
+  /* Padding inside */
+  padding: 15px;
+  /* Space between projects */
+  margin-bottom: 15px;
+}
+
+.project-name {
+  /* Project title styling */
+  font-size: 11px;
+  /* Dark teal color */
+  color: #3D8D7A;
+  /* Space below the name */
+  margin-bottom: 8px;
+}
+
+.project-description {
+  /* Description text styling */
+  font-size: 9px;
+  /* Slightly lighter color */
+  color: #3D8D7A;
+}
+
+/* ===== CLUBS SECTION ===== */
+.clubs-list {
+  /* Stack clubs vertically */
+}
+
+.club-item {
+  /* Light cream background */
+  background-color: #FBFFE4;
+  /* Border for each club */
+  border: 3px solid #3D8D7A;
+  /* Padding inside */
+  padding: 15px;
+  /* Space between clubs */
+  margin-bottom: 15px;
+}
+
+.club-name {
+  /* Club name styling */
+  font-size: 11px;
+  /* Dark teal color */
+  color: #3D8D7A;
+  /* Space below the name */
+  margin-bottom: 8px;
+}
+
+.club-description {
+  /* Description text styling */
+  font-size: 9px;
+  /* Slightly lighter color */
+  color: #3D8D7A;
+}
+
+/* ===== CERTIFICATIONS SECTION ===== */
+.certifications-list {
+  /* Display certifications in a row */
+  display: flex;
+  /* Wrap to next line if needed */
+  flex-wrap: wrap;
+  /* Space between items */
+  gap: 15px;
+}
+
+.cert-item {
+  /* Each cert takes up equal space */
+  flex: 1;
+  /* Minimum width so they don't get too small */
+  min-width: 200px;
+  /* Light cream background */
+  background-color: #FBFFE4;
+  /* Border for retro look */
+  border: 3px solid #3D8D7A;
+  /* Padding inside */
+  padding: 15px;
+  /* Center text */
+  text-align: center;
+}
+
+.cert-badge {
+  /* Certificate name styling */
+  font-size: 10px;
+  /* Dark teal color */
+  color: #3D8D7A;
+  /* Display as block */
+  display: block;
+  /* Space below the badge name */
+  margin-bottom: 8px;
+}
+
+.cert-date {
+  /* Date styling */
+  font-size: 8px;
+  /* Light green color for accent */
+  color: #B3D8A8;
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+  /* Dark teal background */
+  background-color: #3D8D7A;
+  /* Border for consistency */
+  border: 6px solid #3D8D7A;
+  /* Padding inside */
+  padding: 20px;
+  /* Center the text */
+  text-align: center;
+  /* Add top margin for spacing */
+  margin-top: 40px;
+}
+
+footer p {
+  /* Small footer text */
+  font-size: 8px;
+  /* Light cream color */
+  color: #FBFFE4;
+  /* No bottom margin for footer */
+  margin-bottom: 0;
+}
