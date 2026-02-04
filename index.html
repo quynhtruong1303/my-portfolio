@@ -4,15 +4,30 @@
   <meta charset="UTF-8">
   <title>My Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Import a retro-style pixel font -->
+  <!-- Import Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Import a font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="#about" class="nav-link">About Me</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#clubs" class="nav-link">Clubs</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- Header with title -->
   <header>
     <div class="header-content">
-      <h1 class="main-title">Game Developer</h1>
-      <p class="subtitle">Building My Portfolio</p>
+      <img src="img/profile.jpg" alt="Profile Picture" class="profile-picture">
+      <h1 class="main-title">Hi! I'm Nha Truong</h1>
+      <p class="subtitle">Computer Science | University of Colorado Denver</p>
     </div>
   </header>
 
@@ -20,90 +35,150 @@
   <main class="container">
     
     <!-- BIO SECTION -->
-    <section class="card bio-section">
+    <section class="card bio-section" id="about">
       <h2 class="section-title">About Me</h2>
       <p>Hi! I'm a web developer learning to build awesome projects. I love gaming, coding, and creating fun digital experiences. This portfolio showcases my journey as I grow my web development skills.</p>
-      <p>Currently studying web development at my college and working on exciting projects to build my skillset.</p>
+      <p>Currently I'm a Vice President of the SASE (Society of Asian Scientists and Engineers) club at University of Colorado Denver.</p>
+      <p>I'm studying Computer Science at my college and working on exciting projects to build my skillset.</p>
     </section>
 
     <!-- SKILLS SECTION -->
-    <section class="card skills-section">
+    <section class="card skills-section" id="skills">
       <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
+      <div class="skills-list">
         <div class="skill-item">
-          <span class="skill-badge">HTML</span>
+          <i class="material-icons">code</i>
+          <span class="skill-name">Python</span>
         </div>
         <div class="skill-item">
-          <span class="skill-badge">CSS</span>
+          <i class="material-icons">architecture</i>
+          <span class="skill-name">C/C++</span>
         </div>
         <div class="skill-item">
-          <span class="skill-badge">JavaScript</span>
+          <i class="material-icons">coffee</i>
+          <span class="skill-name">Java</span>
         </div>
         <div class="skill-item">
-          <span class="skill-badge">Problem Solving</span>
+          <i class="material-icons">javascript</i>
+          <span class="skill-name">JavaScript</span>
         </div>
         <div class="skill-item">
-          <span class="skill-badge">Web Design</span>
+          <i class="material-icons">description</i>
+          <span class="skill-name">TypeScript</span>
         </div>
         <div class="skill-item">
-          <span class="skill-badge">Creativity</span>
+          <i class="material-icons">language</i>
+          <span class="skill-name">HTML</span>
+        </div>
+        <div class="skill-item">
+          <i class="material-icons">palette</i>
+          <span class="skill-name">CSS</span>
+        </div>
+        <div class="skill-item">
+          <i class="material-icons">storage</i>
+          <span class="skill-name">SQL</span>
         </div>
       </div>
     </section>
 
     <!-- RECENT PROJECTS SECTION -->
-    <section class="card projects-section">
+    <section class="card projects-section" id="projects">
       <h2 class="section-title">Recent Projects</h2>
       <div class="projects-list">
         <div class="project-item">
-          <h3 class="project-name">Project 1: Personal Website</h3>
-          <p class="project-description">Building my first portfolio site with HTML and CSS. Learning to create layouts and style web pages.</p>
+          <h3 class="project-name">Folded Flight</h3>
+          <p class="project-description">A retro-style pixel-art endless runner Android game made with Android Studio</p>
+          <a href="https://github.com/quynhtruong1303/Folded-Flight" class="project-link" target="_blank">
+            <i class="material-icons">open_in_new</i>
+            <span>View on GitHub</span>
+          </a>
         </div>
         <div class="project-item">
-          <h3 class="project-name">Project 2: Coming Soon</h3>
-          <p class="project-description">Working on my next cool project! Stay tuned for updates.</p>
+          <h3 class="project-name">eCommerce App</h3>
+          <p class="project-description">A mockup app of Nike's eCommerce website</p>
+          <a href="https://github.com/quynhtruong1303/eCommerce-App" class="project-link" target="_blank">
+            <i class="material-icons">open_in_new</i>
+            <span>View on GitHub</span>
+          </a>
         </div>
         <div class="project-item">
-          <h3 class="project-name">Project 3: Coming Soon</h3>
-          <p class="project-description">More awesome projects in development. Check back soon!</p>
+          <h3 class="project-name">Zookeeper Database</h3>
+          <p class="project-description">A simple database of zoo animals built with PHP</p>
+          <a href="https://github.com/quynhtruong1303/Zookeeper-DB" class="project-link" target="_blank">
+            <i class="material-icons">open_in_new</i>
+            <span>View on GitHub</span>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- CLUBS & ORGANIZATIONS SECTION -->
-    <section class="card clubs-section">
+    <section class="card clubs-section" id="clubs">
       <h2 class="section-title">Clubs & Organizations</h2>
       <div class="clubs-list">
         <div class="club-item">
-          <h3 class="club-name">🎮 Gaming Club</h3>
-          <p class="club-description">Member of the college gaming club where we discuss games and participate in tournaments.</p>
+          <img src="img/SASE.png" alt="Gaming Club Logo" class="club-logo">
         </div>
         <div class="club-item">
-          <h3 class="club-name">💻 Web Development Society</h3>
-          <p class="club-description">Active member learning and collaborating with other developers on web projects.</p>
-        </div>
-        <div class="club-item">
-          <h3 class="club-name">🚀 Innovation Club</h3>
-          <p class="club-description">Brainstorming and building innovative tech projects with passionate students.</p>
+          <img src="img/tdm.webp" alt="Web Development Society Logo" class="club-logo">
         </div>
       </div>
     </section>
 
     <!-- CERTIFICATIONS SECTION -->
-    <section class="card certifications-section">
+    <section class="card certifications-section" id="certifications">
       <h2 class="section-title">Certifications</h2>
-      <div class="certifications-list">
-        <div class="cert-item">
-          <span class="cert-badge">HTML & CSS Basics</span>
-          <p class="cert-date">Completed 2025</p>
+      <ul class="certifications-list">
+        <li class="cert-item">
+          <span class="cert-badge">CompTIA Security+</span>
+          <span class="cert-date">Expected May 2026</span>
+        </li>
+        <li class="cert-item">
+          <span class="cert-badge">Cybersecurity & Secure Computing</span>
+          <span class="cert-date">Expected May 2026</span>
+        </li>
+        <li class="cert-item">
+          <span class="cert-badge">NVIDIA Generative AI with Diffusion Models</span>
+          <span class="cert-date">2025</span>
+        </li>
+        <li class="cert-item">
+          <span class="cert-badge">NVIDIA Transformer-Based NLP Applications</span>
+          <span class="cert-date">2025</span>
+        </li>
+        <li class="cert-item">
+          <span class="cert-badge">NVIDIA Application of AI for Anomaly Detection</span>
+          <span class="cert-date">2025</span>
+        </li>
+        <li class="cert-item">
+          <span class="cert-badge">NVIDIA Building Agentic AI Applications with LLMs</span>
+          <span class="cert-date">2025</span>
+        </li>
+      </ul>
+    </section>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="card contact-section" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-content">
+        <div class="contact-items">
+          <a href="mailto:quynhtruong1303@gmail.com" class="contact-item" target="_blank">
+            <i class="material-icons">email</i>
+            <span>Gmail</span>
+          </a>
+          <a href="https://github.com/quynhtruong1303" class="contact-item" target="_blank">
+            <i class="material-icons">language</i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/nha-truong-63a716285/" class="contact-item" target="_blank">
+            <i class="material-icons">business</i>
+            <span>LinkedIn</span>
+          </a>
         </div>
-        <div class="cert-item">
-          <span class="cert-badge">Web Development Fundamentals</span>
-          <p class="cert-date">In Progress</p>
-        </div>
-        <div class="cert-item">
-          <span class="cert-badge">Responsive Web Design</span>
-          <p class="cert-date">Planned</p>
+        <div class="phone-number">
+          <i class="material-icons">phone</i>
+          <span>+1 (720) 568-9616</span>
         </div>
       </div>
     </section>
@@ -112,7 +187,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 My Portfolio. All rights reserved. Game on! 🎮</p>
+    <p>&copy; 2026 Nha Truong. All rights reserved</p>
   </footer>
 
 </body>

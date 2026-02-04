@@ -1,5 +1,63 @@
 /* ===== COLOR PALETTE ===== */
-/* #3D8D7A (dark teal), #B3D8A8 (light green), #FBFFE4 (cream), #A3D1C6 (mint) */
+/* #2d336b (dark navy), #7886c7 (medium blue), #fff2f2 (light pink), #a9b5df (light lavender) */
+
+/* ===== NAVIGATION BAR STYLES ===== */
+.navbar {
+  /* Dark navy background */
+  background-color: #2d336b;
+  /* Subtle shadow instead of thick border */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Padding for spacing */
+  padding: 15px 20px;
+  /* Rounded corners */
+  border-radius: 12px;
+  /* Sticky positioning at top */
+  position: sticky;
+  top: 0;
+  /* Layer above other content */
+  z-index: 100;
+}
+
+.nav-list {
+  /* Remove default list bullets */
+  list-style: none;
+  /* Display items horizontally */
+  display: flex;
+  /* Wrap to next line if needed */
+  flex-wrap: wrap;
+  /* Center items */
+  justify-content: center;
+  /* Space between items */
+  gap: 20px;
+  /* Remove default margin and padding */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  /* Light pink text color for contrast */
+  color: #fff2f2;
+  /* Remove default link underline */
+  text-decoration: none;
+  /* Font size for readability */
+  font-size: 14px;
+  /* Smooth transition for hover effect */
+  transition: all 0.3s ease;
+  /* Padding for better click area */
+  padding: 8px 16px;
+  /* Rounded corners for modern look */
+  border-radius: 6px;
+}
+
+/* Hover effect for navigation links */
+.nav-link:hover {
+  /* Light lavender background on hover */
+  background-color: #a9b5df;
+  /* Dark navy text on hover */
+  color: #2d336b;
+  /* Add subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 /* ===== GENERAL STYLES ===== */
 * {
@@ -11,14 +69,17 @@
 }
 
 body {
-  /* Use retro pixel font for that gaming vibe */
-  font-family: 'Press Start 2P', cursive;
-  /* Fallback font if pixel font doesn't load */
-  font-family: 'Press Start 2P', Arial, sans-serif;
-  /* Light cream background for retro feel */
-  background-color: #FBFFE4;
-  /* Dark teal text for good contrast */
-  color: #3D8D7A;
+  /* Use Noto Sans KR font */
+  font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  /* Background image with overlay */
+  background-image: linear-gradient(rgba(242, 242, 242, 0.70), rgba(242, 242, 242, 0.70)), url('img/wallpaper.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  /* Fallback color */
+  background-color: #f5ecd5;
+  /* Dark olive text for good contrast */
+  color: #626f47;
   /* Add some padding around the whole page */
   padding: 20px;
   /* Smooth transitions for interactive elements */
@@ -27,12 +88,14 @@ body {
 
 /* ===== HEADER STYLES ===== */
 header {
-  /* Dark teal background for the header */
-  background-color: #3D8D7A;
-  /* Thick pixelated border for retro look */
-  border: 8px solid #3D8D7A;
+  /* Clean dark navy background for modern look */
+  background-color: #2d336b;
+  /* Subtle shadow instead of thick border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Rounded corners for modern look */
+  border-radius: 12px;
   /* Add some padding inside */
-  padding: 40px 20px;
+  padding: 50px 20px;
   /* Center the content */
   text-align: center;
   /* Add margin at bottom for spacing */
@@ -41,22 +104,46 @@ header {
 
 .header-content {
   /* Create a nice container for the header text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture {
+  /* Set width and height to create a circle */
+  width: 150px;
+  height: 150px;
+  /* Perfect circle with 50% border radius */
+  border-radius: 50%;
+  /* Add a border frame around the image */
+  border: 6px solid #fff2f2;
+  /* Maintain image aspect ratio */
+  object-fit: cover;
+  /* Add some margin below the image */
+  margin-bottom: 20px;
 }
 
 .main-title {
   /* Large title text */
-  font-size: 32px;
-  /* Light cream color for contrast */
-  color: #FBFFE4;
+  font-size: 42px;
+  /* Light pink color */
+  color: #fff2f2;
   /* Add bottom margin for spacing from subtitle */
   margin-bottom: 10px;
+  /* Smooth font weight */
+  font-weight: 700;
+  /* Better letter spacing */
+  letter-spacing: -0.5px;
+  
 }
 
 .subtitle {
   /* Smaller subtitle text */
-  font-size: 12px;
-  /* Mint color for accent */
-  color: #A3D1C6;
+  font-size: 16px;
+  /* Light lavender color for accent */
+  color: #a9b5df;
+  /* Better font weight */
+  font-weight: 500;
 }
 
 /* ===== MAIN CONTAINER ===== */
@@ -69,193 +156,371 @@ header {
 
 /* ===== CARD STYLES (Section styling) ===== */
 .card {
-  /* Light mint background for each section */
-  background-color: #A3D1C6;
-  /* Thick border for pixelated/retro feel */
-  border: 6px solid #3D8D7A;
+  /* Medium blue background as main color */
+  background-color: #7886c7;
+  /* Subtle shadow instead of thick border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Rounded corners for modern look */
+  border-radius: 12px;
   /* Padding inside the card */
-  padding: 30px;
+  padding: 40px;
   /* Add space between cards */
   margin-bottom: 30px;
+  /* Add margin for sticky navbar so it doesn't cover the section title */
+  scroll-margin-top: 100px;
 }
 
 .section-title {
   /* Title size for each section */
-  font-size: 20px;
-  /* Dark teal color */
-  color: #3D8D7A;
+  font-size: 28px;
+  /* Light pink color for contrast */
+  color: #fff2f2;
   /* Add space below the title */
   margin-bottom: 20px;
-  /* Add bottom border line */
-  border-bottom: 4px solid #3D8D7A;
+  /* Light lavender bottom border line */
+  border-bottom: 3px solid #a9b5df;
   /* Padding below the border */
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  /* Better font weight */
+  font-weight: 700;
+  /* Center the title */
+  text-align: center;
 }
 
 .card p {
   /* Add space between paragraphs */
   margin-bottom: 15px;
   /* Readable font size */
-  font-size: 10px;
+  font-size: 16px;
+  /* Better line height for readability */
+  line-height: 1.7;
+  /* Light pink color for contrast */
+  color: #fff2f2;
+}
+
+.card .project-description {
+  color: #7886C7;
+}
+
+.card .cert-date {
+  color: #7886C7;
 }
 
 /* ===== SKILLS SECTION ===== */
-.skills-grid {
-  /* Display skills in a grid layout */
+.skills-list {
+  /* Display skills horizontally */
   display: flex;
   /* Wrap items to next line if needed */
   flex-wrap: wrap;
   /* Space between skill items */
-  gap: 15px;
+  gap: 20px;
+  /* Center items */
+  justify-content: center;
+  /* Remove default list styling */
+  list-style: none;
+  /* Remove default padding and margin */
+  padding: 0;
+  margin: 0;
 }
 
 .skill-item {
-  /* Each skill takes up equal space */
-  flex: 1;
-  /* Minimum width so they don't get too small */
-  min-width: 150px;
+  /* Display icon and name side by side */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Space between icon and name */
+  gap: 8px;
+  /* Smooth transition */
+  transition: all 0.3s ease;
+  /* Padding for better spacing */
+  padding: 15px 20px;
+  /* Rounded corners */
+  border-radius: 8px;
 }
 
-.skill-badge {
-  /* Light cream background for badges */
-  background-color: #FBFFE4;
-  /* Dark teal border for retro look */
-  border: 3px solid #3D8D7A;
-  /* Padding inside the badge */
-  padding: 12px 15px;
-  /* Display as a block so it takes full width */
-  display: block;
-  /* Center text inside */
-  text-align: center;
-  /* Smaller font size for badges */
-  font-size: 9px;
-  /* Smooth color transition on hover */
-  transition: all 0.2s ease;
+.skill-item:hover {
+  /* Subtle background on hover */
+  background-color: #f8f9fa;
 }
 
-/* Hover effect for skill badges */
-.skill-badge:hover {
-  /* Change to dark teal background on hover */
-  background-color: #3D8D7A;
-  /* Change text to cream color */
-  color: #FBFFE4;
+.skill-item i {
+  /* Material Icons styling */
+  font-size: 32px;
+  /* Light lavender color for icons */
+  color: #2D336B;
+}
+
+.skill-name {
+  /* Skill name styling */
+  font-size: 14px;
+  /* Dark navy color */
+  color: #2d336b;
+  /* Better font weight */
+  font-weight: 600;
 }
 
 /* ===== PROJECTS SECTION ===== */
 .projects-list {
-  /* Stack projects vertically */
-}
-
-.project-item {
-  /* Light cream background */
-  background-color: #FBFFE4;
-  /* Border for each project */
-  border: 3px solid #3D8D7A;
-  /* Padding inside */
-  padding: 15px;
-  /* Space between projects */
-  margin-bottom: 15px;
-}
-
-.project-name {
-  /* Project title styling */
-  font-size: 11px;
-  /* Dark teal color */
-  color: #3D8D7A;
-  /* Space below the name */
-  margin-bottom: 8px;
-}
-
-.project-description {
-  /* Description text styling */
-  font-size: 9px;
-  /* Slightly lighter color */
-  color: #3D8D7A;
-}
-
-/* ===== CLUBS SECTION ===== */
-.clubs-list {
-  /* Stack clubs vertically */
-}
-
-.club-item {
-  /* Light cream background */
-  background-color: #FBFFE4;
-  /* Border for each club */
-  border: 3px solid #3D8D7A;
-  /* Padding inside */
-  padding: 15px;
-  /* Space between clubs */
-  margin-bottom: 15px;
-}
-
-.club-name {
-  /* Club name styling */
-  font-size: 11px;
-  /* Dark teal color */
-  color: #3D8D7A;
-  /* Space below the name */
-  margin-bottom: 8px;
-}
-
-.club-description {
-  /* Description text styling */
-  font-size: 9px;
-  /* Slightly lighter color */
-  color: #3D8D7A;
-}
-
-/* ===== CERTIFICATIONS SECTION ===== */
-.certifications-list {
-  /* Display certifications in a row */
+  /* Display projects horizontally */
   display: flex;
   /* Wrap to next line if needed */
   flex-wrap: wrap;
   /* Space between items */
-  gap: 15px;
+  gap: 20px;
+  /* Center items */
+  justify-content: center;
+}
+
+.project-item {
+  /* Light pink background */
+  background-color: #fff2f2;
+  /* Subtle shadow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  /* Rounded corners */
+  border-radius: 10px;
+  /* Padding inside */
+  padding: 25px;
+  /* Fixed width for horizontal layout */
+  width: 280px;
+  /* Smooth transition for hover */
+  transition: all 0.3s ease;
+}
+
+.project-name {
+  /* Project title styling */
+  font-size: 18px;
+  /* Dark navy color */
+  color: #2d336b;
+  /* Space below the name */
+  margin-bottom: 10px;
+  /* Better font weight */
+  font-weight: 700;
+}
+
+.project-description {
+  /* Description text styling */
+  font-size: 14px;
+  /* Dark navy color */
+  color: #2d336b;
+  /* Better line height */
+  line-height: 1.6;
+  /* Margin below description */
+  margin-bottom: 12px;
+}
+
+.project-link {
+  /* Display as inline-flex for icon and text alignment */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  /* Link styling */
+  color: #7886c7;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  /* Smooth transition */
+  transition: all 0.3s ease;
+  /* Padding for better click area */
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.project-link:hover {
+  /* Light lavender background on hover */
+  background-color: #a9b5df;
+  /* Light pink text on hover */
+  color: #fff2f2;
+}
+
+.project-link i {
+  /* Icon sizing */
+  font-size: 18px;
+}
+
+/* ===== CLUBS SECTION ===== */
+.clubs-list {
+  /* Display clubs in a row */
+  display: flex;
+  /* Wrap to next line if needed */
+  flex-wrap: wrap;
+  /* Space between items */
+  gap: 20px;
+  /* Center items horizontally */
+  justify-content: center;
+}
+
+.club-item {
+  /* Light pink background */
+  background-color: #fff2f2;
+  /* Subtle shadow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* Padding inside */
+  padding: 20px;
+  /* Width and height equal to create a circle */
+  width: 180px;
+  height: 180px;
+  /* Perfect circle with 50% border radius */
+  border-radius: 50%;
+  /* Center content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Center text */
+  text-align: center;
+  /* Smooth transition for hover */
+  transition: all 0.3s ease;
+}
+
+.club-item:hover {
+  /* Enhanced shadow on hover */
+  box-shadow: 0 6px 16px rgba(120, 134, 199, 0.3);
+  /* Slightly lift the element */
+  transform: translateY(-5px);
+}
+
+
+.club-logo {
+  /* Make image fill the circle */
+  max-width: 100%;
+  max-height: 100%;
+  /* Maintain aspect ratio */
+  object-fit: contain;
+}
+
+/* ===== CERTIFICATIONS SECTION ===== */
+.certifications-list {
+  /* Stack certifications vertically */
+  display: flex;
+  flex-direction: column;
+  /* Space between items */
+  gap: 12px;
+  /* Remove default list styling */
+  list-style: none;
+  /* Remove default padding and margin */
+  padding: 0;
+  margin: 0;
 }
 
 .cert-item {
-  /* Each cert takes up equal space */
-  flex: 1;
-  /* Minimum width so they don't get too small */
-  min-width: 200px;
-  /* Light cream background */
-  background-color: #FBFFE4;
-  /* Border for retro look */
-  border: 3px solid #3D8D7A;
-  /* Padding inside */
+  /* Display cert name and date side by side */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Padding for spacing */
   padding: 15px;
-  /* Center text */
-  text-align: center;
+  /* Light background */
+  background-color: #f8f9fa;
+  /* Subtle shadow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  /* Rounded corners */
+  border-radius: 8px;
+  /* Smooth transition */
+  transition: all 0.3s ease;
+}
+
+.cert-item:hover {
+  /* Enhanced shadow on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cert-badge {
   /* Certificate name styling */
-  font-size: 10px;
-  /* Dark teal color */
-  color: #3D8D7A;
-  /* Display as block */
-  display: block;
-  /* Space below the badge name */
-  margin-bottom: 8px;
+  font-size: 16px;
+  /* Dark navy color */
+  color: #2d336b;
+  /* Display as inline */
+  display: inline;
+  /* Better font weight */
+  font-weight: 700;
 }
 
 .cert-date {
   /* Date styling */
-  font-size: 8px;
-  /* Light green color for accent */
-  color: #B3D8A8;
+  font-size: 14px;
+  /* Light lavender color for accent */
+  color: #a9b5df;
+  /* Better font weight */
+  font-weight: 500;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-content {
+  /* Display contact items and phone vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Space between items */
+  gap: 30px;
+}
+
+.contact-items {
+  /* Display contact links horizontally */
+  display: flex;
+  flex-wrap: wrap;
+  /* Space between items */
+  gap: 20px;
+  /* Center items */
+  justify-content: center;
+}
+
+.contact-item {
+  /* Display icon and text vertically centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  /* Link styling */
+  color: #2D336B;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  /* Smooth transition */
+  transition: all 0.3s ease;
+  /* Padding for better click area */
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.contact-item:hover {
+  /* Light lavender background on hover */
+  background-color: #a9b5df;
+  /* Light pink text on hover */
+  color: #fff2f2;
+}
+
+.contact-item i {
+  /* Icon sizing */
+  font-size: 32px;
+}
+
+.phone-number {
+  /* Display phone info */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Phone number styling */
+  color: #2d336b;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.phone-number i {
+  /* Phone icon styling */
+  font-size: 24px;
+  color: #2D336B;
 }
 
 /* ===== FOOTER STYLES ===== */
 footer {
-  /* Dark teal background */
-  background-color: #3D8D7A;
-  /* Border for consistency */
-  border: 6px solid #3D8D7A;
+  /* Light pink background */
+  background-color: #fff2f2;
+  /* Subtle shadow */
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  /* Rounded corners */
+  border-radius: 12px;
   /* Padding inside */
-  padding: 20px;
+  padding: 30px 20px;
   /* Center the text */
   text-align: center;
   /* Add top margin for spacing */
@@ -263,10 +528,12 @@ footer {
 }
 
 footer p {
-  /* Small footer text */
-  font-size: 8px;
-  /* Light cream color */
-  color: #FBFFE4;
+  /* Footer text */
+  font-size: 14px;
+  /* Dark navy color */
+  color: #2d336b;
   /* No bottom margin for footer */
   margin-bottom: 0;
+  /* Better font weight */
+  font-weight: 500;
 }
