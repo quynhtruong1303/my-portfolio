@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="style.css">
   <!-- Import Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Devicons for tech stack logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <!-- Import a font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
@@ -14,6 +16,7 @@
   <nav class="navbar">
     <ul class="nav-list">
       <li><a href="#about" class="nav-link">About Me</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#clubs" class="nav-link">Clubs</a></li>
@@ -25,9 +28,14 @@
   <!-- Header with title -->
   <header>
     <div class="header-content">
-      <img src="img/profile.jpg" alt="Profile Picture" class="profile-picture">
+      <img src="public/profile.jpg" alt="Profile Picture" class="profile-picture">
       <h1 class="main-title">Hi! I'm Nha Truong</h1>
       <p class="subtitle">Computer Science | University of Colorado Denver</p>
+      <p class="typed-subtitle">Aspiring <span id="typed-role"></span><span class="typed-cursor">|</span></p>
+      <button class="resume-btn" onclick="openResume()">
+        <i class="material-icons">description</i>
+        <span>View Resume</span>
+      </button>
     </div>
   </header>
 
@@ -37,47 +45,110 @@
     <!-- BIO SECTION -->
     <section class="card bio-section" id="about">
       <h2 class="section-title">About Me</h2>
-      <p>Hi! I'm a web developer learning to build awesome projects. I love gaming, coding, and creating fun digital experiences. This portfolio showcases my journey as I grow my web development skills.</p>
-      <p>Currently I'm a Vice President of the SASE (Society of Asian Scientists and Engineers) club at University of Colorado Denver.</p>
-      <p>I'm studying Computer Science at my college and working on exciting projects to build my skillset.</p>
+      <p>I'm a Computer Science student at the University of Colorado Denver (GPA: 3.7) graduating in May 2026, pursuing roles in software engineering, full stack development, and data engineering.</p>
+      <p>My work spans full stack web apps, data pipelines, and analytical tooling. I'm currently an Undergraduate Data Researcher at Purdue University, building transportation safety tools with Apache Superset, PostgreSQL, and Docker. I've also been deepening my AI knowledge through NVIDIA's deep learning curriculum.</p>
+      <p>On campus I serve as Vice President of SASE and as a Student Assistant in the CACE office, where I support student organizations and help coordinate campus events. I'm always looking for opportunities to build, collaborate, and grow.</p>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="card experience-section" id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="experience-list">
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3 class="experience-role">Undergraduate Data Researcher</h3>
+              <p class="experience-org">Purdue University</p>
+            </div>
+            <div class="experience-meta">
+              <span class="experience-date">Jan 2026 – Present</span>
+              <span class="experience-location">Colorado Springs, CO</span>
+            </div>
+          </div>
+          <ul class="experience-bullets">
+            <li>Collaborated with a team of 8 researchers and corporate partner Orion Labs LLC to model transportation safety using near-miss collision datasets.</li>
+            <li>Built a user-facing analytical tool with Apache Superset, PostgreSQL, and Docker to visualize safety outputs for road engineers and transportation agencies.</li>
+            <li>Integrated historical crash data with real-time traffic patterns to identify correlations between near-miss types and high-priority accidents.</li>
+            <li>Developed cost-effective data strategies to improve accessibility of traffic data for informed safety decision-making.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <h3 class="experience-role">Student Assistant</h3>
+              <p class="experience-org">University of Colorado Denver, CACE Office</p>
+            </div>
+            <div class="experience-meta">
+              <span class="experience-date">Jan 2026 – Present</span>
+              <span class="experience-location">Denver, CO</span>
+            </div>
+          </div>
+          <ul class="experience-bullets">
+            <li>Support the CACE office by collaborating with staff on a monthly Newsletter Team covering student highlights, study tips, scholarships, and academic resources.</li>
+            <li>Assisted the AANHPI Planning Committee in overseeing event planning and budget allocation for 4 Asian student organizations at CU Denver.</li>
+            <li>Provided logistical guidance and resource coordination to empower student leaders in executing culturally significant campus events.</li>
+          </ul>
+        </div>
+
+      </div>
     </section>
 
     <!-- SKILLS SECTION -->
     <section class="card skills-section" id="skills">
       <h2 class="section-title">Skills</h2>
-      <div class="skills-list">
-        <div class="skill-item">
-          <i class="material-icons">code</i>
-          <span class="skill-name">Python</span>
+      <div class="skills-categories">
+
+        <div class="skill-category">
+          <h3 class="category-label">Languages</h3>
+          <div class="skills-list">
+            <div class="skill-item"><i class="devicon-python-plain colored"></i><span class="skill-name">Python</span></div>
+            <div class="skill-item"><i class="devicon-java-plain colored"></i><span class="skill-name">Java</span></div>
+            <div class="skill-item"><i class="devicon-c-plain colored"></i><span class="skill-name">C</span></div>
+            <div class="skill-item"><i class="devicon-cplusplus-plain colored"></i><span class="skill-name">C++</span></div>
+            <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span class="skill-name">JavaScript</span></div>
+            <div class="skill-item"><i class="devicon-typescript-plain colored"></i><span class="skill-name">TypeScript</span></div>
+            <div class="skill-item"><i class="devicon-html5-plain colored"></i><span class="skill-name">HTML</span></div>
+            <div class="skill-item"><i class="devicon-css3-plain colored"></i><span class="skill-name">CSS</span></div>
+          </div>
         </div>
-        <div class="skill-item">
-          <i class="material-icons">architecture</i>
-          <span class="skill-name">C/C++</span>
+
+        <div class="skill-category">
+          <h3 class="category-label">Frameworks & Libraries</h3>
+          <div class="skills-list">
+            <div class="skill-item"><i class="devicon-react-original colored"></i><span class="skill-name">React</span></div>
+            <div class="skill-item"><i class="devicon-nextjs-plain colored"></i><span class="skill-name">Next.js</span></div>
+            <div class="skill-item"><i class="devicon-nodejs-plain colored"></i><span class="skill-name">Node.js</span></div>
+            <div class="skill-item"><i class="devicon-tailwindcss-plain colored"></i><span class="skill-name">Tailwind</span></div>
+            <div class="skill-item"><i class="devicon-bootstrap-plain colored"></i><span class="skill-name">Bootstrap</span></div>
+            <div class="skill-item"><i class="devicon-pandas-plain colored"></i><span class="skill-name">pandas</span></div>
+            <div class="skill-item"><i class="devicon-numpy-plain colored"></i><span class="skill-name">NumPy</span></div>
+          </div>
         </div>
-        <div class="skill-item">
-          <i class="material-icons">coffee</i>
-          <span class="skill-name">Java</span>
+
+        <div class="skill-category">
+          <h3 class="category-label">Tools</h3>
+          <div class="skills-list">
+            <div class="skill-item"><i class="devicon-git-plain colored"></i><span class="skill-name">Git</span></div>
+            <div class="skill-item"><i class="devicon-github-original colored"></i><span class="skill-name">GitHub</span></div>
+            <div class="skill-item"><i class="devicon-docker-plain colored"></i><span class="skill-name">Docker</span></div>
+            <div class="skill-item"><i class="devicon-vscode-plain colored"></i><span class="skill-name">VS Code</span></div>
+            <div class="skill-item"><i class="devicon-androidstudio-plain colored"></i><span class="skill-name">Android Studio</span></div>
+            <div class="skill-item"><i class="devicon-postman-plain colored"></i><span class="skill-name">Postman</span></div>
+          </div>
         </div>
-        <div class="skill-item">
-          <i class="material-icons">javascript</i>
-          <span class="skill-name">JavaScript</span>
+
+        <div class="skill-category">
+          <h3 class="category-label">Databases</h3>
+          <div class="skills-list">
+            <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><span class="skill-name">PostgreSQL</span></div>
+            <div class="skill-item"><i class="devicon-mongodb-plain colored"></i><span class="skill-name">MongoDB</span></div>
+            <div class="skill-item"><i class="devicon-firebase-plain colored"></i><span class="skill-name">Firebase</span></div>
+            <div class="skill-item"><i class="devicon-supabase-plain colored"></i><span class="skill-name">Supabase</span></div>
+          </div>
         </div>
-        <div class="skill-item">
-          <i class="material-icons">description</i>
-          <span class="skill-name">TypeScript</span>
-        </div>
-        <div class="skill-item">
-          <i class="material-icons">language</i>
-          <span class="skill-name">HTML</span>
-        </div>
-        <div class="skill-item">
-          <i class="material-icons">palette</i>
-          <span class="skill-name">CSS</span>
-        </div>
-        <div class="skill-item">
-          <i class="material-icons">storage</i>
-          <span class="skill-name">SQL</span>
-        </div>
+
       </div>
     </section>
 
@@ -85,30 +156,53 @@
     <section class="card projects-section" id="projects">
       <h2 class="section-title">Recent Projects</h2>
       <div class="projects-list">
-        <div class="project-item">
+        <a href="https://github.com/quynhtruong1303/cc-fraud-detection-frontend" class="project-item" target="_blank">
+          <div class="project-tooltip">
+            <p class="tooltip-desc">Full-stack fraud analysis platform visualizing patterns in 100k+ transactions, with a paginated REST API and PostgreSQL data warehouse.</p>
+            <div class="tooltip-icons">
+              <i class="devicon-react-original colored"></i>
+              <i class="devicon-nodejs-plain colored"></i>
+              <i class="devicon-express-original colored"></i>
+              <i class="devicon-postgresql-plain colored"></i>
+              <i class="devicon-supabase-plain colored"></i>
+            </div>
+          </div>
+          <h3 class="project-name">Credit Card Fraud Analysis Dashboard</h3>
+        </a>
+        <a href="https://github.com/quynhtruong1303/application-tracker-client" class="project-item" target="_blank">
+          <div class="project-tooltip">
+            <p class="tooltip-desc">Full-stack Kanban board app with JWT auth, drag-and-drop tracking, and MongoDB aggregation analytics. Deployed on Render.</p>
+            <div class="tooltip-icons">
+              <i class="devicon-react-original colored"></i>
+              <i class="devicon-nodejs-plain colored"></i>
+              <i class="devicon-express-original colored"></i>
+              <i class="devicon-mongodb-plain colored"></i>
+              <i class="devicon-tailwindcss-plain colored"></i>
+            </div>
+          </div>
+          <h3 class="project-name">Job Application Tracker</h3>
+        </a>
+        <a href="https://github.com/quynhtruong1303/Folded-Flight" class="project-item" target="_blank">
+          <div class="project-tooltip">
+            <p class="tooltip-desc">Retro-style pixel-art endless runner Android game.</p>
+            <div class="tooltip-icons">
+              <i class="devicon-java-plain colored"></i>
+              <i class="devicon-androidstudio-plain colored"></i>
+            </div>
+          </div>
           <h3 class="project-name">Folded Flight</h3>
-          <p class="project-description">A retro-style pixel-art endless runner Android game made with Android Studio</p>
-          <a href="https://github.com/quynhtruong1303/Folded-Flight" class="project-link" target="_blank">
-            <i class="material-icons">open_in_new</i>
-            <span>View on GitHub</span>
-          </a>
-        </div>
-        <div class="project-item">
+        </a>
+        <a href="https://github.com/quynhtruong1303/eCommerce-App" class="project-item" target="_blank">
+          <div class="project-tooltip">
+            <p class="tooltip-desc">Mockup of Nike's eCommerce website with product browsing and cart functionality.</p>
+            <div class="tooltip-icons">
+              <i class="devicon-javascript-plain colored"></i>
+              <i class="devicon-html5-plain colored"></i>
+              <i class="devicon-css3-plain colored"></i>
+            </div>
+          </div>
           <h3 class="project-name">eCommerce App</h3>
-          <p class="project-description">A mockup app of Nike's eCommerce website</p>
-          <a href="https://github.com/quynhtruong1303/eCommerce-App" class="project-link" target="_blank">
-            <i class="material-icons">open_in_new</i>
-            <span>View on GitHub</span>
-          </a>
-        </div>
-        <div class="project-item">
-          <h3 class="project-name">Zookeeper Database</h3>
-          <p class="project-description">A simple database of zoo animals built with PHP</p>
-          <a href="https://github.com/quynhtruong1303/Zookeeper-DB" class="project-link" target="_blank">
-            <i class="material-icons">open_in_new</i>
-            <span>View on GitHub</span>
-          </a>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -117,10 +211,25 @@
       <h2 class="section-title">Clubs & Organizations</h2>
       <div class="clubs-list">
         <div class="club-item">
-          <img src="img/SASE.png" alt="Gaming Club Logo" class="club-logo">
+          <img src="public/SASE.png" alt="SASE Logo" class="club-logo">
+          <h3 class="club-name">SASE</h3>
+          <p class="club-role">Vice President</p>
+          <p class="club-desc">Society of Asian Scientists and Engineers, University of Colorado Denver chapter</p>
+          <p class="club-year">Jan 2026 – Present</p>
         </div>
         <div class="club-item">
-          <img src="img/tdm.webp" alt="Web Development Society Logo" class="club-logo">
+          <img src="public/tdm.webp" alt="TDM Logo" class="club-logo">
+          <h3 class="club-name">The Data Mine</h3>
+          <p class="club-role">Member</p>
+          <p class="club-desc">Purdue University's Data Mine of the Rockies, a corporate-partnered data science learning community</p>
+          <p class="club-year">Jan 2026 – Present</p>
+        </div>
+        <div class="club-item">
+          <img src="public/CACE.jpg" alt="CACE Logo" class="club-logo">
+          <h3 class="club-name">CACE Office</h3>
+          <p class="club-role">Student Assistant</p>
+          <p class="club-desc">Center for Access & Campus Engagement at CU Denver</p>
+          <p class="club-year">Jan 2026 – Present</p>
         </div>
       </div>
     </section>
@@ -130,12 +239,12 @@
       <h2 class="section-title">Certifications</h2>
       <ul class="certifications-list">
         <li class="cert-item">
-          <span class="cert-badge">CompTIA Security+</span>
-          <span class="cert-date">Expected May 2026</span>
+          <span class="cert-badge">Cybersecurity & Secure Computing</span>
+          <span class="cert-date">2025</span>
         </li>
         <li class="cert-item">
-          <span class="cert-badge">Cybersecurity & Secure Computing</span>
-          <span class="cert-date">Expected May 2026</span>
+          <span class="cert-badge">NASPA Certified Peer Educator</span>
+          <span class="cert-date">2025</span>
         </li>
         <li class="cert-item">
           <span class="cert-badge">NVIDIA Generative AI with Diffusion Models</span>
@@ -146,16 +255,14 @@
           <span class="cert-date">2025</span>
         </li>
         <li class="cert-item">
-          <span class="cert-badge">NVIDIA Application of AI for Anomaly Detection</span>
+          <span class="cert-badge">NVIDIA AI for Anomaly Detection</span>
           <span class="cert-date">2025</span>
         </li>
         <li class="cert-item">
-          <span class="cert-badge">NVIDIA Building Agentic AI Applications with LLMs</span>
+          <span class="cert-badge">NVIDIA Agentic AI Applications with LLMs</span>
           <span class="cert-date">2025</span>
         </li>
       </ul>
-    </section>
-      </div>
     </section>
 
     <!-- CONTACT SECTION -->
@@ -176,19 +283,26 @@
             <span>LinkedIn</span>
           </a>
         </div>
-        <div class="phone-number">
-          <i class="material-icons">phone</i>
-          <span>+1 (720) 568-9616</span>
-        </div>
       </div>
     </section>
 
   </main>
+
+  <!-- Resume Modal -->
+  <div id="resume-modal" class="modal-overlay" onclick="closeResumeOnBackdrop(event)">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeResume()">
+        <i class="material-icons">close</i>
+      </button>
+      <iframe src="public/Truong_Resume.pdf" class="resume-iframe" title="Nha Truong Resume"></iframe>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Nha Truong. All rights reserved</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
