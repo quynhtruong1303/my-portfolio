@@ -1,6 +1,29 @@
-# Project 1: Build Your Personal Website with AI!
-In this project, you will leverage AI and your knowledge of HTML and CSS to build a simple, single-page personal website that will showcase your projects.
+# Nha Truong — Personal Portfolio
 
-You will use AI to help you brainstorm design ideas, apply web development best practices, and troubleshoot issues, bringing your vision to life on screen! 
+Personal portfolio website for Nha Truong, a Computer Science student at the University of Colorado Denver pursuing roles in software engineering, full stack development, and data engineering.
 
-Launch a Codespace to get started. **Remember to Commit and Push** your project changes to GitHub from Codespaces to prevent losing progress.
+## Live Site
+
+[quynhtruong1303.github.io/my-portfolio](https://quynhtruong1303.github.io/my-portfolio)
+
+## Features
+
+- Typed text animation cycling through career titles
+- Hover tooltips on project cards showing tech stack icons
+- Resume viewer modal (PDF embedded inline)
+- Scroll-fade animations on all sections
+- Devicons for tech stack logos throughout
+
+## Sections
+
+- About Me
+- Experience
+- Skills
+- Projects
+- Clubs & Organizations
+- Certifications
+- Contact
+
+## Tech
+
+Pure HTML, CSS, and vanilla JavaScript. No frameworks or build tools.
