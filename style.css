@@ -646,6 +646,57 @@ header {
   font-weight: 500;
 }
 
+/* ===== HOBBIES SECTION ===== */
+.hobbies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.hobby-card {
+  background-color: #fff2f2;
+  border-radius: 12px;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.hobby-icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 10px;
+  color: #7886c7;
+}
+
+.hobby-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d336b;
+  margin-bottom: 10px;
+}
+
+.hobby-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hobby-list li {
+  font-size: 13px;
+  color: #7886c7;
+  font-weight: 500;
+}
+
 /* ===== CONTACT SECTION ===== */
 .contact-content {
   /* Display contact items and phone vertically */

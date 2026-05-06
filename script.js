@@ -1,3 +1,14 @@
+// Easter egg: rickroll on profile picture click
+document.addEventListener('DOMContentLoaded', () => {
+  const profilePic = document.querySelector('.profile-picture');
+  if (profilePic) {
+    profilePic.style.cursor = 'pointer';
+    profilePic.addEventListener('click', () => {
+      window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+    });
+  }
+});
+
 // Typed text animation
 const roles = ['Software Engineer', 'Full Stack Developer', 'Data Engineer', 'Undergraduate Researcher'];
 let roleIndex = 0;
